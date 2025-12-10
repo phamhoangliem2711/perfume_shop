@@ -1,0 +1,12 @@
+INSERT INTO products (ten, mo_ta, thuong_hieu_id, danh_muc_id) VALUES
+('Nước hoa mẫu 1', 'Mô tả sản phẩm 1', 1, 1),
+('Nước hoa mẫu 2', 'Mô tả sản phẩm 2', 2, 2);
+
+INSERT INTO variants (product_id, dung_tich, gia) VALUES
+(1, 50, 450000),
+(1, 100, 850000),
+(2, 50, 650000);
+
+INSERT INTO images (product_id, url) VALUES
+(1, '/DALTWED/perfume_shop/public/assets/uploads/sample1.jpg'),
+(2, '/DALTWED/perfume_shop/public/assets/uploads/sample2.jpg');

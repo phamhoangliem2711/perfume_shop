@@ -1,0 +1,140 @@
+{
+    "Dior_1.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_1.jpg"
+    },
+    "Dior_2.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_2.jpg"
+    },
+    "Dior_3.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_3.jpg"
+    },
+    "Dior_4.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_4.jpg"
+    },
+    "Dior_5.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_5.jpg"
+    },
+    "Dior_6.jpg": {
+        "status": "match",
+        "product_id": 1,
+        "score": 1,
+        "new_name": "1_Dior_6.jpg"
+    },
+    "GC_1.jpg": {
+        "status": "no_match"
+    },
+    "GC_2.jpg": {
+        "status": "no_match"
+    },
+    "GC_3.jpg": {
+        "status": "no_match"
+    },
+    "GC_4.jpg": {
+        "status": "no_match"
+    },
+    "GC_5.jpg": {
+        "status": "no_match"
+    },
+    "Ver_1.jpg": {
+        "status": "match",
+        "product_id": 14,
+        "score": 1,
+        "new_name": "14_Ver_1.jpg"
+    },
+    "Ver_2.jpg": {
+        "status": "match",
+        "product_id": 14,
+        "score": 1,
+        "new_name": "14_Ver_2.jpg"
+    },
+    "Ver_3.jpg": {
+        "status": "match",
+        "product_id": 14,
+        "score": 1,
+        "new_name": "14_Ver_3.jpg"
+    },
+    "Ver_4.jpg": {
+        "status": "match",
+        "product_id": 14,
+        "score": 1,
+        "new_name": "14_Ver_4.jpg"
+    },
+    "Ysl_1.jpg": {
+        "status": "match",
+        "product_id": 11,
+        "score": 1,
+        "new_name": "11_Ysl_1.jpg"
+    },
+    "Ysl_2.jpg": {
+        "status": "match",
+        "product_id": 11,
+        "score": 1,
+        "new_name": "11_Ysl_2.jpg"
+    },
+    "Ysl_3.jpg": {
+        "status": "match",
+        "product_id": 11,
+        "score": 1,
+        "new_name": "11_Ysl_3.jpg"
+    },
+    "Ysl_4.jpg": {
+        "status": "match",
+        "product_id": 11,
+        "score": 1,
+        "new_name": "11_Ysl_4.jpg"
+    },
+    "Ysl_5.jpg": {
+        "status": "match",
+        "product_id": 11,
+        "score": 1,
+        "new_name": "11_Ysl_5.jpg"
+    },
+    "chanel_1.jpg": {
+        "status": "match",
+        "product_id": 5,
+        "score": 1,
+        "new_name": "5_chanel_1.jpg"
+    },
+    "chanel_2.jpg": {
+        "status": "match",
+        "product_id": 5,
+        "score": 1,
+        "new_name": "5_chanel_2.jpg"
+    },
+    "chanel_3.jpg": {
+        "status": "match",
+        "product_id": 5,
+        "score": 1,
+        "new_name": "5_chanel_3.jpg"
+    },
+    "chanel_4.jpg": {
+        "status": "match",
+        "product_id": 5,
+        "score": 1,
+        "new_name": "5_chanel_4.jpg"
+    },
+    "chanel_5.jpg": {
+        "status": "match",
+        "product_id": 5,
+        "score": 1,
+        "new_name": "5_chanel_5.jpg"
+    },
+    "no-image.svg": {
+        "status": "no_match"
+    }
+}

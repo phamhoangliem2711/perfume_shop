@@ -1,0 +1,47 @@
+# Bật chức năng rewrite
+RewriteEngine On
+
+# 1. REWRITE URL: path/index.php?mod=news&id=1 thành path/news/1.html
+RewriteCond %{QUERY_STRING} ^mod=([^&]+)&id=([^&]+)$
+RewriteRule ^index\.php$ /%1/%2.html? [R=301,L]
+
+RewriteRule ^([^/]+)/([^/]+)\.html$ index.php?mod=$1&id=$2 [QSA,L]
+
+# 2. CHẶN IP BẮT ĐẦU 234.45
+RewriteCond %{REMOTE_ADDR} ^234\.45 [NC]
+RewriteRule .* - [F]
+
+# Hoặc dùng cách khác:
+# Order Allow,Deny
+# Allow from all
+# Deny from 234.45.
+
+# 3. CHẶN HOTLINK ẢNH
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?buoi1.com [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?localhost [NC]
+RewriteRule \.(jpg|jpeg|png|gif|bmp|webp)$ - [NC,F]
+
+# 4. THAY ĐỔI TRANG CHỦ
+DirectoryIndex myindex.php index.php index.html
+
+# 5. CẤM DUYỆT CÂY THƯ MỤC
+Options -Indexes
+
+# 6. ĐẶT MẬT KHẨU BẢO VỆ THƯ MỤC
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile "E:/wampserver/www/Buoi1/.htpasswd"
+Require valid-user
+
+# Các thiết lập bổ sung
+# Tự động thêm www vào domain
+RewriteCond %{HTTP_HOST} ^buoi1.com [NC]
+RewriteRule ^(.*)$ http://www.buoi1.com/$1 [L,R=301]
+
+# Bảo mật: Ẩn file .htaccess và .htpasswd
+<Files ~ "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
+</Files>
