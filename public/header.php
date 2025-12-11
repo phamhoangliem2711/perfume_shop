@@ -23,7 +23,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
   <div class="container">
-    <a class="navbar-brand" href="<?= base_url('/public/index.php') ?>">Perfume Shop</a>
+    <a class="navbar-brand" href="<?= base_url('/index.php') ?>">Perfume Shop</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -50,7 +50,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
           <ul class="dropdown-menu" aria-labelledby="navCat">
             <?php foreach ($cats as $c): ?>
               <li>
-                <a class="dropdown-item" href="<?= base_url('/public/index.php') ?>?category=<?= $c['id'] ?>"
+                <a class="dropdown-item" href="<?= base_url('/index.php') ?>?category=<?= $c['id'] ?>"
                   ><?= htmlspecialchars($c['ten']) ?></a
                 >
               </li>
@@ -70,7 +70,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
           <ul class="dropdown-menu" aria-labelledby="navBrand">
             <?php foreach ($brands as $b): ?>
               <li>
-                <a class="dropdown-item" href="<?= base_url('/public/index.php') ?>?brand=<?= $b['id'] ?>"
+                <a class="dropdown-item" href="<?= base_url('/index.php') ?>?brand=<?= $b['id'] ?>"
                   ><?= htmlspecialchars($b['ten']) ?></a
                 >
               </li>
@@ -82,7 +82,7 @@ if (isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
         </li>
       </ul>
 
-      <form class="d-flex me-3" method="get" action="<?= base_url('/public/index.php') ?>">
+      <form class="d-flex me-3" method="get" action="<?= base_url('/index.php') ?>">
         <input
           name="q"
           class="form-control me-2"

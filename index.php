@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/../helpers.php';  // file helper chứa hàm db_connect(), base_url(), ...
+require_once __DIR__ . '/helpers.php';  // file helper chứa hàm db_connect(), base_url(), ...
 $db = db_connect();
 $pageTitle = 'Trang chủ - Perfume Shop';
-include __DIR__ . '/header.php';
+include __DIR__ . '/public/header.php';
 
 /* =============================
    XỬ LÝ LỌC CATEGORY + BRAND
@@ -91,7 +91,7 @@ $brands = $db->query("SELECT id, ten FROM brands ORDER BY ten")->fetchAll(PDO::F
                 <strong><?= number_format($p['gia'] ?? 0, 0, ',', '.') ?>₫</strong>
               </p>
 
-              <form method="get" action="cart.php" class="mt-auto d-flex align-items-center gap-2">
+              <form method="get" action="<?= base_url('/public/cart.php') ?>" class="mt-auto d-flex align-items-center gap-2">
                 <input type="hidden" name="action" value="add" />
                 <input type="hidden" name="product_id" value="<?= $p['id'] ?>" />
 
@@ -104,7 +104,7 @@ $brands = $db->query("SELECT id, ten FROM brands ORDER BY ten")->fetchAll(PDO::F
                 <button type="submit" class="btn btn-primary btn-sm">Thêm vào giỏ</button>
               </form>
 
-              <a href="product.php?id=<?= $p['id'] ?>" class="btn btn-link btn-sm mt-2">
+              <a href="<?= base_url('/public/product.php') ?>?id=<?= $p['id'] ?>" class="btn btn-link btn-sm mt-2">
                 Xem chi tiết
               </a>
             </div>
@@ -134,7 +134,7 @@ $brands = $db->query("SELECT id, ten FROM brands ORDER BY ten")->fetchAll(PDO::F
         <ul class="list-unstyled">
           <?php foreach ($cats as $c): ?>
             <li>
-              <a href="<?= base_url('/public/index.php') ?>?category=<?= $c['id'] ?>"
+              <a href="<?= base_url('/index.php') ?>?category=<?= $c['id'] ?>"
                 class="<?= (($_GET['category'] ?? 0) == $c['id']) ? 'fw-bold' : '' ?>">
                 <?= htmlspecialchars($c['ten']) ?>
               </a>
@@ -151,7 +151,7 @@ $brands = $db->query("SELECT id, ten FROM brands ORDER BY ten")->fetchAll(PDO::F
         <ul class="list-unstyled">
           <?php foreach ($brands as $b): ?>
             <li>
-              <a href="<?= base_url('/public/index.php') ?>?brand=<?= $b['id'] ?>"
+              <a href="<?= base_url('/index.php') ?>?brand=<?= $b['id'] ?>"
                 class="<?= (($_GET['brand'] ?? 0) == $b['id']) ? 'fw-bold' : '' ?>">
                 <?= htmlspecialchars($b['ten']) ?>
               </a>
@@ -172,4 +172,4 @@ $brands = $db->query("SELECT id, ten FROM brands ORDER BY ten")->fetchAll(PDO::F
   </div>
 </div>
 
-<?php include __DIR__ . '/footer.php'; ?>
+<?php include __DIR__ . '/public/footer.php'; ?>

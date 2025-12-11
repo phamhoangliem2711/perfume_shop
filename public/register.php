@@ -4,7 +4,7 @@ $pageTitle = 'Đăng ký - Perfume Shop';
 include __DIR__ . '/header.php';
 
 if (is_logged_in()) {
-    header('Location: ' . base_url('/public/index.php'));
+    header('Location: ' . base_url('/index.php'));
     exit;
 }
 

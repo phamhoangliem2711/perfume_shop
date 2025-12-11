@@ -3,11 +3,11 @@ require_once __DIR__ . '/../helpers.php';
 $db = db_connect();
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $pageTitle = 'Chi tiết sản phẩm';
-if (!$id) header('Location: index.php');
+if (!$id) header('Location: ' . base_url('/index.php'));
 $stmt = $db->prepare("SELECT * FROM products WHERE id = ?");
 $stmt->execute([$id]);
 $p = $stmt->fetch(PDO::FETCH_ASSOC);
-if (!$p) header('Location: index.php');
+if (!$p) header('Location: ' . base_url('/index.php'));
 
 $pageTitle = htmlspecialchars($p['ten']);
 include __DIR__ . '/header.php';
@@ -51,5 +51,5 @@ $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
   <label>Số lượng: <input class="form-control" style="width:80px;" type="number" name="q" value="1" min="1"></label>
   <button class="btn btn-primary" type="submit">Thêm vào giỏ</button>
 </form>
-<p><a href="<?= base_url('/public/index.php') ?>">Về trang chủ</a></p>
+<p><a href="<?= base_url('/index.php') ?>">Về trang chủ</a></p>
 <?php include __DIR__ . '/footer.php'; ?>

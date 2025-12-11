@@ -7,7 +7,7 @@ if (is_logged_in()) {
     if ($user && ($user['role'] ?? 'user') === 'admin') {
         header('Location: ' . base_url('/admin/index.php'));
     } else {
-        header('Location: ' . base_url('/public/index.php'));
+        header('Location: ' . base_url('/index.php'));
     }
     exit;
 }
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (($user['role'] ?? 'user') === 'admin') {
                 header('Location: ' . base_url('/admin/index.php'));
             } else {
-                header('Location: ' . base_url('/public/index.php'));
+                header('Location: ' . base_url('/index.php'));
             }
             exit;
         } else {

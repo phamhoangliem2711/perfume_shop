@@ -8,14 +8,15 @@ function db_connect() {
     return $db->connect();
 }
 
-// Base path (relative to your web root): set this to "/DALTWED/perfume_shop" for WAMP, or "/perfume_shop" if your vhost points to the project root.
+// Base path - auto detect or empty for root deployment
 if (!defined('BASE_PATH')) {
     $script = $_SERVER['SCRIPT_NAME'] ?? ($_SERVER['PHP_SELF'] ?? '');
     $basePos = strpos($script, '/perfume_shop');
     if ($basePos !== false) {
         define('BASE_PATH', substr($script, 0, $basePos + strlen('/perfume_shop')));
     } else {
-        define('BASE_PATH', '/DALTWED/perfume_shop');
+        // For hosting deployment (root level) or local without subdirectory
+        define('BASE_PATH', '');
     }
 }
 

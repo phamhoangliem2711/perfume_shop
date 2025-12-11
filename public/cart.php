@@ -271,7 +271,7 @@ include __DIR__ . '/header.php';
             <div class="empty-cart-icon">🛒</div>
             <h3 class="text-muted mb-3">Giỏ hàng trống</h3>
             <p class="text-muted mb-4">Hãy thêm một số sản phẩm vào giỏ hàng để bắt đầu mua sắm!</p>
-            <a href="<?= base_url('/public/index.php') ?>" class="btn btn-primary btn-lg">
+            <a href="<?= base_url('/index.php') ?>" class="btn btn-primary btn-lg">
                 🛍️ Tiếp tục mua sắm
             </a>
         </div>
@@ -375,7 +375,7 @@ include __DIR__ . '/header.php';
                         <a href="checkout.php" class="btn btn-success btn-checkout flex-fill">
                             💳 Thanh toán ngay
                         </a>
-                        <a href="<?= base_url('/public/index.php') ?>" class="btn btn-light btn-continue flex-fill">
+                        <a href="<?= base_url('/index.php') ?>" class="btn btn-light btn-continue flex-fill">
                             🛒 Tiếp tục mua hàng
                         </a>
                     </div>
